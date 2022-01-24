@@ -13,7 +13,7 @@ from sqlalchemy import create_engine
 class AncientpoemspiderPipeline:
 
     def __init__(self):
-        self.engine = create_engine('')
+        self.engine = create_engine('mysql')
 
     def process_item(self, item, spider):
 
