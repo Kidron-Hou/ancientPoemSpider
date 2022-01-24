@@ -1,0 +1,9 @@
+DROP TABLE IF EXISTS `poems`;
+CREATE TABLE `poems` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `poem_verse` varchar(255) DEFAULT NULL,
+  `poem_author` varchar(255) DEFAULT NULL,
+  `poem_name` varchar(32) DEFAULT NULL,
+  `create_time` varchar(255) DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=1 DEFAULT CHARSET=utf8mb4;

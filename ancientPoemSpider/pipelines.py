@@ -7,10 +7,14 @@
 # useful for handling different item types with a single interface
 from itemadapter import ItemAdapter
 
-import pymysql
+from sqlalchemy import create_engine
 
 
 class AncientpoemspiderPipeline:
+
+    def __init__(self):
+        self.engine = create_engine('')
+
     def process_item(self, item, spider):
 
         return item
