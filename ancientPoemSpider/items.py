@@ -9,7 +9,7 @@ import scrapy
 class AncientpoemspiderItem(scrapy.Item):
     # define the fields for your item here like:
     verse = scrapy.Field()  # 诗句
-    resource = scrapy.Field()  # 出处
+    resource = scrapy.Field()  # 诗词出处
     crawl_time = scrapy.Field()  # 抓取时间
 
 
