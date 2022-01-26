@@ -11,11 +11,16 @@ import time
 import scrapy
 from datetime import datetime
 from ancientPoemSpider.items import AncientpoemspiderItem
+from scrapy_redis.spiders import RedisSpider
 
 
-class VerseSpider(scrapy.Spider):
+
+# class VerseSpider(scrapy.Spider):
+class VerseSpider(RedisSpider):
     name = 'poem'
-    start_urls = 'https://so.gushiwen.cn/mingjus/default.aspx?page={p}&tstr=&astr=&cstr=&xstr='
+    allowed_domains = ['gushiwen.cn']
+    redis_key = 'poem:start_urls'
+    # start_urls = 'https://so.gushiwen.cn/mingjus/default.aspx?page={p}&tstr=&astr=&cstr=&xstr='
 
     def start_requests(self):
         for i in range(5):
